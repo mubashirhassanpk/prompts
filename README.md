@@ -31,6 +31,13 @@ I will give you where I'm going, what days I'll be there, and what my budget is.
 My website is https://mubashirhassan.com/ . I found a competitor here: https://perfectketo.com/blog/
 Focusing only on blog content, specifically informational content and tips type articles, compare the two websites, and come up with a content plan for my blog that would cover topics that perfectketo.com has covered that my blog has not. The content needs to be ideas that ketokrush could easily rank for as the content on perfectketo.com was not optimized for. You will investigate both websites and tell me what I need to write and add to ketokrush.com to grow the website.
 
+### Generate Lego, Simpsons & Pixar Images with ChatGPT
+Lego Prompt: "Create image. Convert this photo into a lego character. Keep the outfit style the same as the image. The Lego figure should be full bodied. Make them happy. Include a background setting of a creative office space full of post its and whiteboards."
+
+Simpsons Prompt: "Create image. Convert the same photo into a Simpsons style character. The character is an energetic technology expert. Put them into an appropriate setting in the Simpson universe."
+
+Pixar Prompt: "Create image. Use the attached image as a reference. Create a whimsical Pixar-style character with large expressive eyes, soft lighting, and vibrant colours in an imaginative setting like a magical or futuristic city."
+
 ### 🛠️ Build A Website In Under 2 Minutes
 
 Create a prompt to build a full modern HTML landing page for a service called **Finish Mode AI**, which helps businesses automate their operations using custom AI systems.
