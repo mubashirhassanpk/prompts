@@ -234,6 +234,233 @@ Please generate the complete WordPress plugin code along with installation instr
 **Best for:** Bloggers, photographers, eCommerce  
 
 ---
+# Helpful Prompts for Tools Website
+
+Below is a collection of prompts designed to create modern, user-friendly, and feature-rich web applications for your tools website. These prompts focus on building scalable, SEO-optimized, and engaging tools that cater to various user needs, perfect for developers, marketers, and business owners.
+
+---
+
+## Web Application Prompts
+
+### 1. QR Code Generator Web App
+
+**Prompt:**  
+Build a responsive and user-friendly QR Code Generator Web App.
+
+**Core Features:**  
+1. **QR Code Generation:**  
+   - Users can generate QR codes for:  
+     - Website URLs  
+     - Text / Messages  
+     - WiFi Credentials (SSID & Password)  
+     - Contact Information (vCard)  
+     - Social Media Links (Instagram, YouTube, WhatsApp)  
+     - Email & SMS (Pre-filled messages)  
+     - Payment Links (PayPal, Stripe)  
+2. **Customization Options:**  
+   - Change QR code colors (Dark Mode, Custom Colors)  
+   - Add logo or branding inside the QR Code  
+   - Choose different QR code styles (square, rounded, dots, etc.)  
+   - Adjustable QR code size & resolution  
+3. **Download & Sharing:**  
+   - Download QR codes in PNG, SVG, PDF formats  
+   - Generate dynamic QR codes (editable later)  
+   - One-click sharing to WhatsApp, Instagram, Email, etc.  
+4. **UI/UX Requirements:**  
+   - Mobile-first, lightweight, and fast loading  
+   - Drag & Drop interface for logo uploads  
+   - Built with React, Next.js, or Vue.js for smooth performance  
+   - Ensure the app is SEO-optimized for search engines like "Free QR Code Generator," "Dynamic QR Code Maker," etc.
+
+**Output:**  
+Please generate the complete web app code, including HTML, CSS, JavaScript (or framework-specific files), along with installation and usage instructions.
+
+---
+
+### 2. AI-Based Video Reels & Shorts Editor Web App
+
+**Prompt:**  
+Build a smart, AI-powered, user-friendly online Video Editor for Reels & Shorts.
+
+**Core Features:**  
+1. **Upload & Basic Editing:**  
+   - Users can upload videos (MP4, MOV, WebM, etc.)  
+   - Trim, cut, and merge video clips  
+   - Adjust playback speed (slow-motion, fast-forward)  
+2. **AI-Powered Enhancements:**  
+   - Auto Subtitle Generator (Speech-to-Text)  
+   - Background Noise Removal  
+   - Auto-Crop for Instagram Reels, TikTok, YouTube Shorts  
+   - AI-Powered Color Correction  
+3. **Text & Effects:**  
+   - Add animated text overlays  
+   - Choose from viral caption styles  
+   - Apply trending video effects & transitions  
+4. **Music & Sound Effects:**  
+   - Royalty-free music library  
+   - Auto sync video to beat  
+   - Voiceover feature with AI text-to-speech  
+5. **Pre-Made Templates:**  
+   - Ready-to-use templates for YouTube Shorts, Instagram Reels, and TikTok  
+   - Templates for viral trends (e.g., motivational reels, meme edits, cinematic edits)  
+6. **Export & Sharing:**  
+   - Download videos in 1080p HD without watermark (Premium Feature)  
+7. **UI/UX Requirements:**  
+   - Mobile & desktop-friendly design  
+   - Drag & drop interface  
+   - Built with React, Next.js, or Vue.js for smooth performance  
+   - Use AI for automatic video enhancements, making editing fast and beginner-friendly!
+
+**Output:**  
+Please generate the complete web app code, including HTML, CSS, JavaScript (or framework-specific files), along with installation and usage instructions.
+
+---
+
+### 3. eCommerce Product Profit Calculator Web App
+
+**Prompt:**  
+Build a modern, responsive, and user-friendly eCommerce Product Profit Calculator Web App.
+
+**Key Features:**  
+1. **Cost Breakdown Inputs:**  
+   - Product Cost (PKR, $, etc.)  
+   - Shipping Cost  
+   - Packaging Cost  
+   - Marketing/Ad Spend  
+   - Platform Fees (e.g., Shopify, Amazon, Flipkart)  
+   - Additional Costs  
+2. **Profit Margin Calculation:**  
+   - Selling Price  
+   - Total Expenses  
+   - Profit Per Product  
+   - Profit Margin (%)  
+3. **Tax & Fees Calculator (Optional Toggle):**  
+   - GST / VAT Calculation  
+4. **Breakeven Analysis:**  
+   - Number of Sales Needed to Cover Costs  
+   - Suggested Pricing for 20% / 30% / 50% Profit  
+5. **UI/UX Requirements:**  
+   - Modern, mobile-friendly responsive design  
+   - Interactive real-time calculation (JS or AJAX)  
+   - Dark Mode option  
+   - Clean UI with Bootstrap or Tailwind CSS  
+   - Use technologies that ensure fast performance and scalability (React, Next.js, or Vue.js with Node.js backend).
+
+**Output:**  
+Please generate the complete web app code, including HTML, CSS, JavaScript (or framework-specific files), along with installation and usage instructions.
+
+---
+
+### 4. Barcode Generator and Scanner Web App
+
+**Prompt:**  
+Build a modern, user-friendly, and fast Barcode Generator & Scanner Web App.
+
+**Core Features:**  
+1. **Barcode Generation:**  
+   - Users can generate barcodes in different formats, including:  
+     - UPC-A, UPC-E (Retail Products)  
+     - EAN-13, EAN-8 (European Barcode Standard)  
+     - QR Code (For URLs, Payments, etc.)  
+     - Code 39, Code 128 (Logistics & Inventory)  
+     - ISBN (Books & Publications)  
+     - DataMatrix, GS1-128 (Warehouses & Healthcare)  
+   - Option to customize barcode size & format  
+   - Download as PNG, JPG, SVG, PDF  
+2. **Barcode Scanner:**  
+   - Users can scan barcodes using their phone or webcam  
+   - Auto-detects barcode type and displays information  
+   - Redirects to relevant pages for product searches (Google, Amazon)  
+   - Option to copy scanned barcode data to clipboard  
+3. **Bulk Barcode Generator (Premium Feature):**  
+   - Users can upload CSV files to generate barcodes in bulk  
+   - Download barcodes in ZIP format  
+4. **UI/UX Requirements:**  
+   - Mobile-first, lightweight, and fast loading  
+   - Simple drag-and-drop UI for bulk upload  
+   - Dark Mode & Light Mode toggle  
+   - Built with React.js, Next.js, or Vue.js for smooth experience  
+   - Ensure the app is SEO-optimized for keywords like "Free Barcode Generator," "Barcode Scanner Online," "Bulk Barcode Maker," etc.
+
+**Output:**  
+Please generate the complete web app code, including HTML, CSS, JavaScript (or framework-specific files), along with installation and usage instructions.
+
+---
+
+### 5. URL Shortener Web App
+
+**Prompt:**  
+Build a modern, fast, and feature-rich URL Shortener Web App with Custom Branding (Bitly Alternative).
+
+**Core Features:**  
+1. **URL Shortening:**  
+   - Users can shorten long URLs into custom, branded short links (e.g., yourbrand.com/custom-link).  
+   - Option to generate random or custom slugs (e.g., xyz.ly/sale2025).  
+   - QR Code generation for each shortened link.  
+2. **Custom Domain Branding:**  
+   - Users can connect their own domain for short links (e.g., mystore.pk/deal).  
+   - DNS setup guide for domain integration.  
+3. **Advanced Analytics & Tracking:**  
+   - Track clicks, geo-location, device type, OS, browser, and referrer source.  
+   - Real-time statistics dashboard with interactive charts.  
+   - UTM parameter support for Google Analytics tracking.  
+4. **Link Expiration & Access Control:**  
+   - Set expiration date or click limit for each link.  
+   - Password protection for private links.  
+5. **Bulk URL Shortening (Premium Feature):**  
+   - Users can upload CSV files to shorten multiple links at once.  
+   - Download shortened URLs as CSV or JSON.  
+6. **API for Developers:**  
+   - Provide an API key-based system for automated link shortening.  
+   - API documentation with usage examples.  
+7. **Monetization Strategy:**  
+   - Freemium Model: Basic link shortening free, premium features paid.  
+   - Subscription Plans: Unlimited links, custom domains, deep analytics.  
+   - Affiliate Marketing: Recommend hosting, domains, analytics tools.  
+   - Google AdSense / Sponsored Ads for free users.  
+8. **UI/UX Requirements:**  
+   - Fast, mobile-responsive, lightweight design.  
+   - Dark Mode & Light Mode toggle.  
+   - Built with React.js, Next.js, or Vue.js for smooth experience.  
+   - Ensure the app is SEO-optimized for keywords like "Best URL Shortener," "Custom Branded Links," "Free Link Tracker," etc.
+
+**Output:**  
+Please generate the complete web app code, including HTML, CSS, JavaScript (or framework-specific files), along with installation and usage instructions.
+
+---
+
+### 6. Online File Converter Web App
+
+**Prompt:**  
+Build a fast, user-friendly, and multi-format Online File Converter Web App.
+
+**Core Features:**  
+1. **File Format Conversion:**  
+   - Users can upload & convert files between multiple formats, including:  
+     - **Document:** PDF ↔ DOCX, PPT ↔ PDF, Excel ↔ CSV  
+     - **Image:** JPG ↔ PNG, PNG ↔ SVG, WebP ↔ JPG  
+     - **Audio:** MP3 ↔ WAV, AAC ↔ MP3  
+     - **Video:** MP4 ↔ WebM, AVI ↔ MP4  
+     - **Other:** HTML ↔ PDF, ZIP ↔ RAR  
+2. **Bulk File Conversion (Premium Feature):**  
+   - Users can upload multiple files and convert them in bulk.  
+   - Download all converted files as a ZIP archive.  
+3. **Fast & Secure Processing:**  
+   - Cloud-based processing for quick conversions.  
+   - Auto-delete files after X minutes for privacy.  
+4. **Download & Sharing Options:**  
+   - Download converted files in original or compressed size.  
+   - One-click sharing via email or QR code.  
+5. **UI/UX Requirements:**  
+   - Mobile-friendly, lightweight, and fast loading.  
+   - Drag & drop file upload with progress bar.  
+   - Built with React, Next.js, or Vue.js for a smooth experience.  
+   - Ensure the app is SEO-optimized for keywords like "Free File Converter," "Convert PDF to Word Online," "MP4 to MP3 Converter," etc.
+
+**Output:**  
+Please generate the complete web app code, including HTML, CSS, JavaScript (or framework-specific files), along with installation and usage instructions.
+
+---
 
 ### 🛠️ Build A Website In Under 2 Minutes
 
