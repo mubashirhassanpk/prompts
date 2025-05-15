@@ -1,0 +1,226 @@
+Helpful Prompts for Tools Website
+Below is a collection of prompts designed to enhance your tools website with advanced functionality, focusing on Static Site Generation (SSG) for a Lovable-built website and SEO optimization. These prompts are tailored for developers looking to improve performance, scalability, and search engine visibility.
+
+Static Site Generation (SSG) for Lovable Website
+Prompt:☠️ USE AT YOUR OWN RISK ☠️In our experiments, this works best with brand-new Lovable builds and tends to break when prompted into existing Lovable projects. But it’s worth a try, just be prepared to roll back!
+Instructions:  
+
+Create your Lovable website with an initial prompt.  
+Just go ahead and create your website/app as usual.
+
+
+Paste the prompt below exactly.  
+Follow the Lovable instructions to copy/paste the new Build script into your Packages folder.
+
+Prompt Content:  
+# IMPLEMENT SSG (STATIC SITE GENERATION) EXACTLY AS PER THE BELOW WITHOUT DEVIATION
+
+## FOLLOWING IMPLEMENTATION PROVIDE ME WITH INSTRUCTION ON HOW TO MANUALLY REPLACE/UPDATE THE EXISTING SCRIPTS NODE IN THE PACKAGE.JSON INCLUDING ANY TRAILING COMMAS
+
+# Added placeholder to insert rendered content
+diff --git index.html index.html
+--- index.html
++++ index.html
+@@ -13 +13 @@
+-    <div id="root"></div>
++    <div id="root"><!--app-html--></div>
+
+# Added prerender script to generate static HTML
+# NOTE THIS MUST BE .JS AS WILL BE RUN VIA NODE
+diff --git prerender.js prerender.js
+new file mode 100644
+--- /dev/null
++++ prerender.js
+@@ -0,0 +1,35 @@
++import fs from 'node:fs'
++import path from 'node:path'
++import url from 'node:url'
++
++const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
++const toAbsolute = (p) => path.resolve(__dirname, p)
++
++const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
++const { render } = await import('./dist/server/entry-server.js')
++
++const routesToPrerender = fs
++  .readdirSync(toAbsolute('src/pages'))
++  .map((file) => {
++    const name = file.replace(/\.tsx$/, '').toLowerCase()
++    return name === 'index' ? '/' : `/${name}`
++  })
++
++;(async () => {
++  for (const url of routesToPrerender) {
++    const appHtml = render(url);
++    const html = template.replace(`<!--app-html-->`, appHtml)
++
++    const filePath = `dist${url === '/' ? '/index' : url}.html`
++    fs.writeFileSync(toAbsolute(filePath), html)
++    console.log('pre-rendered:', filePath)
++  }
++})()
+
+# Removed BrowserRouter since SSR requires StaticRouter
+diff --git src/App.tsx src/App.tsx
+--- src/App.tsx
++++ src/App.tsx
+@@ -6 +6 @@
+-import { BrowserRouter, Routes, Route } from "react-router-dom";
++import { Routes, Route } from "react-router-dom";
+
+@@ -20,11 +20,9 @@
+-      <BrowserRouter>
+       <AnimatePresence mode="wait">
+         <Routes>
+           <Route path="/" element={<Index />} />
+           <Route path="/about" element={<About />} />
+           <Route path="/varieties" element={<Varieties />} />
+           <Route path="*" element={<NotFound />} />
+         </Routes>
+       </AnimatePresence>
+-      </BrowserRouter> # Moved BrowserRouter to main.tsx for conditional usage
+
+# Added entry-server.tsx to handle SSG rendering
+diff --git src/entry-server.tsx src/entry-server.tsx
+new file mode 100644
+--- /dev/null
++++ src/entry-server.tsx
+@@ -0,0 +1,14 @@
++import ReactDOMServer from 'react-dom/server';
++import { StaticRouter } from 'react-router-dom/server';
++import App from './App';
++
++export function render(url: string) {
++  const html = ReactDOMServer.renderToString(
++    <StaticRouter location={url}>
++      <App />
++    </StaticRouter>
++  );
++  
++  return html;
++}
+
+# Added hydration for SSG and moved BrowserRouter to main.tsx
+diff --git src/main.tsx src/main.tsx
+--- src/main.tsx
++++ src/main.tsx
+@@ -1 +1,2 @@
+-import { createRoot } from 'react-dom/client'
++import { createRoot, hydrateRoot } from 'react-dom/client'
++import { BrowserRouter } from 'react-router-dom'
+
+@@ -5 +6,12 @@
+-createRoot(document.getElementById("root")!).render(<App />);
++const root = document.getElementById("root")!;
++const app = (
++  <BrowserRouter>
++    <App />
++  </BrowserRouter>
++);
++
++# Use hydration for SSR in production
++if (import.meta.env.PROD) {
++  hydrateRoot(root, app);
++} else {
++  createRoot(root).render(app);
++}
+
+# Updated build script to support SSG and prerendering
+# NOTE: PROVIDE INSTRUCTION ON HOW TO DO THIS MANUALLY AS THIS CANNOT BE IMPLEMENTED BY YOU
+diff --git package.json package.json
+--- package.json
++++ package.json
+@@ -8 +8,4 @@
+-    "build": "vite build",
++    "build": "npm run build:client && npm run build:server && npm run build:prerender",
++    "build:client": "vite build", # Builds the client-side app
++    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server", # Builds the SSR entry point
++    "build:prerender": "node prerender", # Runs prerendering to generate static pages
+
+Manual Instructions for Updating package.json:  
+
+Open your package.json file in the root directory of your Lovable project.  
+Locate the "scripts" section. It typically looks like this:  "scripts": {
+  "build": "vite build",
+  ...
+}
+
+
+Replace the existing "build" line with the following:  "build": "npm run build:client && npm run build:server && npm run build:prerender",
+"build:client": "vite build",
+"build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+"build:prerender": "node prerender"
+
+
+Ensure proper formatting:  
+Each script should be on a new line.  
+Add a comma (,) after each script except the last one in the "scripts" object.  
+Example of correct formatting:  "scripts": {
+  "build": "npm run build:client && npm run build:server && npm run build:prerender",
+  "build:client": "vite build",
+  "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+  "build:prerender": "node prerender",
+  "start": "vite"
+}
+
+
+
+
+Save the package.json file.  
+Run npm install to ensure all dependencies are updated, then test the build process with npm run build.
+
+Output:Please follow the above instructions to apply the SSG implementation to your Lovable project. Ensure you create the necessary files (prerender.js, entry-server.tsx) and update index.html, App.tsx, and main.tsx as shown in the diff snippets.
+
+Full Website SEO Prompt
+Prompt:After you have performed the SSG prompt above and deployed your website to Netlify, paste the following into Lovable:
+Update prerender.js so that the output HTML files match the routes defined in App.tsx, ensuring that any subdirectories exist before writing the files.
+
+When adding new pages and blogs:  
+- Make sure to include these in prerender.js.
+
+Instructions:  
+
+Deploy your Lovable website to Netlify after implementing the SSG prompt.  
+Update prerender.js to ensure it dynamically generates HTML files for all routes defined in App.tsx.  
+Before writing each HTML file, check if the necessary subdirectories exist (e.g., for a route like /blog/post1, ensure the dist/blog directory exists).  
+When adding new pages or blog posts:  
+Update the src/pages directory with new .tsx files.  
+Ensure prerender.js includes these new routes by either manually updating the routesToPrerender array or dynamically scanning the src/pages directory.
+
+
+Example modification to prerender.js for subdirectory support:  import fs from 'node:fs';
+import path from 'node:path';
+import url from 'node:url';
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
+const toAbsolute = (p) => path.resolve(__dirname, p);
+
+const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
+const { render } = await import('./dist/server/entry-server.js');
+
+const routesToPrerender = fs
+  .readdirSync(toAbsolute('src/pages'))
+  .map((file) => {
+    const name = file.replace(/\.tsx$/, '').toLowerCase();
+    return name === 'index' ? '/' : `/${name}`;
+  });
+
+(async () => {
+  for (const url of routesToPrerender) {
+    const appHtml = render(url);
+    const html = template.replace(`<!--app-html-->`, appHtml);
+
+    const filePath = `dist${url === '/' ? '/index' : url}.html`;
+    const dir = path.dirname(toAbsolute(filePath));
+
+    // Ensure the directory exists
+    fs.mkdirSync(dir, { recursive: true });
+
+    fs.writeFileSync(toAbsolute(filePath), html);
+    console.log('pre-rendered:', filePath);
+  }
+})();
+
+
+
+Output:Please apply the SEO prompt to your Lovable project after deploying to Netlify. Update prerender.js as shown above to handle subdirectories and ensure new pages/blogs are included in the prerendering process.
