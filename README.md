@@ -1,6 +1,6 @@
 # 🤖 Prompt Vault
 
-Welcome to your AI Prompt Vault! (🕓 Last updated: April 27, 2025)
+Welcome to your AI Prompt Vault! (🕓 Last updated: May 15, 2025)
 
 Inside, you’ll find my prompt library designed to save time and grow your income… Fast.
 
@@ -37,6 +37,203 @@ Lego Prompt: "Create image. Convert this photo into a lego character. Keep the o
 Simpsons Prompt: "Create image. Convert the same photo into a Simpsons style character. The character is an energetic technology expert. Put them into an appropriate setting in the Simpson universe."
 
 Pixar Prompt: "Create image. Use the attached image as a reference. Create a whimsical Pixar-style character with large expressive eyes, soft lighting, and vibrant colours in an imaginative setting like a magical or futuristic city."
+
+# Helpful Prompts for Tools Website
+
+Below is a collection of prompts and ideas designed to create useful tools and WordPress plugins for your website. These prompts focus on building practical, user-friendly tools to enhance functionality and engagement, perfect for developers, bloggers, and business owners.
+
+---
+
+## WordPress Plugin Prompts
+
+### 1. Loan EMI Calculator WordPress Plugin
+
+**Prompt:**  
+I want to create a WordPress plugin named "Loan EMI Calculator" that helps users calculate their monthly loan EMI. The plugin should have a shortcode `[emi_calculator]` to embed it on any page.
+
+**Features Required:**  
+- **Input Fields:** Loan Amount (₹), Interest Rate (%) (Annual), Loan Tenure (Years or Months)  
+- A "Calculate EMI" button that computes the EMI instantly  
+- **Use the EMI formula:** EMI = [P × R × (1+R)^N] / [(1+R)^N – 1], where P = Loan Amount, R = Monthly Interest Rate (Annual Rate / 12 / 100), N = Loan Tenure (in months)  
+- **Display the results:** Monthly EMI, Total Interest Payable, Total Amount Payable (Loan + Interest)  
+- Use AJAX to calculate results dynamically without page refresh  
+- Modern user-friendly UI with proper spacing  
+- Use FontAwesome icons for better visual appeal  
+- Proper CSS styling with `css/style.css` and JavaScript `js/script.js`  
+- The plugin should enqueue scripts properly using `wp_enqueue_scripts`  
+
+**Code Requirements:**  
+- Provide a complete `loan-emi-calculator.php` plugin file  
+- Include `js/script.js` for handling AJAX requests  
+- Include `css/style.css` for styling  
+- Explain step-by-step installation and how to use the plugin  
+
+**Output:**  
+Please generate the complete WordPress plugin code along with installation instructions.
+
+---
+
+### 2. GST Calculator WordPress Plugin
+
+**Prompt:**  
+I want to create a WordPress plugin named "GST Calculator India" that helps users calculate GST on products/services. The plugin should have a shortcode `[gst_calculator]` to display the calculator on any page.
+
+**Features Required:**  
+- **Input Fields:** Original Price (₹), GST Rate (%) (Dropdown with options: 5%, 12%, 18%, 28%)  
+- A "Calculate GST" button to instantly compute the GST amount  
+- **Formula:** GST Amount = (Original Price * GST Rate) / 100, Final Price = Original Price + GST Amount  
+- **Output Display:** GST Amount (₹), Total Price After GST, CGST & SGST Breakdown for intra-state transactions  
+- Use AJAX for dynamic calculation without page refresh  
+- Modern UI with FontAwesome icons  
+- Provide proper CSS styling in `css/style.css` and interactivity with `js/script.js`  
+- Properly enqueue styles and scripts using `wp_enqueue_scripts`  
+
+**Code Requirements:**  
+- Provide the full `gst-calculator.php` plugin file  
+- Include `js/script.js` for AJAX-based calculations  
+- Include `css/style.css` for better styling  
+- Explain step-by-step installation and usage  
+
+**Output:**  
+Please generate the complete WordPress plugin code along with installation instructions.
+
+---
+
+### 3. Word Counter & Read Time Calculator WordPress Plugin
+
+**Prompt:**  
+I want to create a WordPress plugin named "Word Counter & Read Time Calculator" that helps users count words and estimate reading time. The plugin should have a shortcode `[word_counter]` to display it anywhere on a page.
+
+**Features Required:**  
+- **Input Text Box** where users can type or paste text  
+- **Live Word Count** that displays total words and characters as the user types  
+- **Estimated Reading Time Calculation** using the formula: Read Time = Total Words / 200 (Assuming average reading speed is 200 words per minute)  
+- If reading time is less than 1 minute, display the estimated time in seconds  
+- **Display the results dynamically:** Total Words, Total Characters, Estimated Reading Time  
+- AJAX-based real-time calculation without page reload  
+- Modern UI with FontAwesome icons  
+- Proper styling using `css/style.css` and JavaScript interactivity with `js/script.js`  
+- Properly enqueue scripts using `wp_enqueue_scripts`  
+
+**Code Requirements:**  
+- Provide a full `word-counter.php` plugin file  
+- Include `js/script.js` for real-time calculation  
+- Include `css/style.css` for modern UI styling  
+- Explain step-by-step installation and usage  
+
+**Output:**  
+Please generate the full WordPress plugin code along with installation instructions.
+
+---
+
+### 4. Age Calculator WordPress Plugin
+
+**Prompt:**  
+I want to create a WordPress plugin named "Age Calculator" that allows users to calculate their current age based on their Date & Time of Birth. The plugin should include a shortcode `[age_calculator]` to embed it anywhere on a WordPress page.
+
+**Features Required:**  
+- **Input Field** where users can select Date & Time of Birth using a modern Date-Time Picker  
+- A "Calculate Age" button that, when clicked, will:  
+  - Calculate and display years, months, days, hours, minutes, and seconds dynamically  
+  - Show the age result without page refresh using AJAX  
+- **Display Format:** Your Age: XX Years, XX Months, XX Days, XX Hours, XX Minutes, XX Seconds  
+- The Date Picker must include decade selection so users can easily pick their birth year (e.g., 1990-2000, 2000-2010)  
+- The tool should be responsive and mobile-friendly with an attractive UI  
+- Include FontAwesome icons for better visuals  
+- Use AJAX-based calculation so that users don't need to refresh the page  
+- Proper CSS styling with `css/style.css` and interactivity with `js/script.js`  
+- Enqueue styles and scripts properly using `wp_enqueue_scripts`  
+
+**Code Requirements:**  
+- Provide a full `age-calculator.php` plugin file  
+- Include `js/script.js` for handling AJAX and real-time updates  
+- Include `css/style.css` for UI design  
+- Explain step-by-step installation and usage  
+
+**Output:**  
+Please generate the complete WordPress plugin code along with installation instructions.
+
+---
+
+## More Tools Ideas
+
+### ✅ YouTube Video Thumbnail Downloader
+
+**Use Case:** Fetch and download HD thumbnails from any YouTube video URL.  
+
+**Features:**  
+- Enter YouTube Video Link  
+- Show Thumbnail in HD  
+- Download Button for image  
+
+**Best for:** Video editors, social media creators  
+
+---
+
+### ✅ Instagram Hashtag Generator Tool
+
+**Use Case:** Generates trending hashtags for Instagram posts based on keywords.  
+
+**Features:**  
+- Enter Keyword (e.g., fitness, travel)  
+- Fetch Trending Hashtags  
+- Copy All Button  
+
+**Best for:** Influencers, social media managers  
+
+---
+
+### ✅ Custom QR Code Generator
+
+**Use Case:** Generate QR codes for links, text, contact details, or WiFi passwords.  
+
+**Features:**  
+- Input URL, Text, Contact  
+- Generate Downloadable QR Code  
+- Custom Color & Size  
+
+**Best for:** Business websites, event pages  
+
+---
+
+### ✅ Password Generator Tool
+
+**Use Case:** Generate strong passwords for users.  
+
+**Features:**  
+- Set password length  
+- Select Uppercase, Numbers, Symbols  
+- Copy Button  
+
+**Best for:** Security-conscious users  
+
+---
+
+### ✅ Website Speed Test Plugin
+
+**Use Case:** Helps users test their website loading speed.  
+
+**Features:**  
+- Enter Website URL  
+- Show Loading Time  
+- Show Page Size & Recommendations  
+
+**Similar to:** GTmetrix, Google PageSpeed Insights  
+
+---
+
+### ✅ Image Compressor for WordPress
+
+**Use Case:** Reduces image file size before uploading to WordPress.  
+
+**Features:**  
+- Upload image  
+- Set Compression Level  
+- Download Optimized Image  
+
+**Best for:** Bloggers, photographers, eCommerce  
+
+---
 
 ### 🛠️ Build A Website In Under 2 Minutes
 
