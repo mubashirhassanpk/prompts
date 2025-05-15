@@ -52,7 +52,7 @@ Below is a collection of prompts and ideas designed to create useful tools and W
 I want to create a WordPress plugin named "Loan EMI Calculator" that helps users calculate their monthly loan EMI. The plugin should have a shortcode `[emi_calculator]` to embed it on any page.
 
 **Features Required:**  
-- **Input Fields:** Loan Amount (₹), Interest Rate (%) (Annual), Loan Tenure (Years or Months)  
+- **Input Fields:** Loan Amount ($), Interest Rate (%) (Annual), Loan Tenure (Years or Months)  
 - A "Calculate EMI" button that computes the EMI instantly  
 - **Use the EMI formula:** EMI = [P × R × (1+R)^N] / [(1+R)^N – 1], where P = Loan Amount, R = Monthly Interest Rate (Annual Rate / 12 / 100), N = Loan Tenure (in months)  
 - **Display the results:** Monthly EMI, Total Interest Payable, Total Amount Payable (Loan + Interest)  
@@ -76,13 +76,13 @@ Please generate the complete WordPress plugin code along with installation instr
 ### 2. GST Calculator WordPress Plugin
 
 **Prompt:**  
-I want to create a WordPress plugin named "GST Calculator India" that helps users calculate GST on products/services. The plugin should have a shortcode `[gst_calculator]` to display the calculator on any page.
+I want to create a WordPress plugin named "GST Calculator USA" that helps users calculate GST on products/services. The plugin should have a shortcode `[gst_calculator]` to display the calculator on any page.
 
 **Features Required:**  
-- **Input Fields:** Original Price (₹), GST Rate (%) (Dropdown with options: 5%, 12%, 18%, 28%)  
+- **Input Fields:** Original Price ($), GST Rate (%) (Dropdown with options: 5%, 12%, 18%, 28%)  
 - A "Calculate GST" button to instantly compute the GST amount  
 - **Formula:** GST Amount = (Original Price * GST Rate) / 100, Final Price = Original Price + GST Amount  
-- **Output Display:** GST Amount (₹), Total Price After GST, CGST & SGST Breakdown for intra-state transactions  
+- **Output Display:** GST Amount ($), Total Price After GST, CGST & SGST Breakdown for intra-state transactions  
 - Use AJAX for dynamic calculation without page refresh  
 - Modern UI with FontAwesome icons  
 - Provide proper CSS styling in `css/style.css` and interactivity with `js/script.js`  
