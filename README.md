@@ -43,6 +43,20 @@ Pixar Prompt: "Create image. Use the attached image as a reference. Create a whi
 Below is a collection of prompts and ideas designed to create useful tools and WordPress plugins for your website. These prompts focus on building practical, user-friendly tools to enhance functionality and engagement, perfect for developers, bloggers, and business owners.
 
 ---
+## Google Translator Prompt for DeepSeek
+Create a fully responsive and modern translator website that integrates Google Translate’s free API (no API key required). The website should have a sleek, minimal design with a focus on user experience and accessibility.
+
+I have no coding knowledge. I have domain and hosting. So give me code to create my tool website. Also, add a text area to add some content to explain my tool.
+
+Features we need:
+
+Website Name: "AI Translation Tool"
+Detect Language Automatically
+Add more languages like: English, French, Spanish, German, Hindi, Odia, Telugu, Tamil, Gujarati, Sanskrit, also add other country languages.
+Give me the option to upload a logo and favicon.
+Give me options for SEO optimization.
+
+---
 
 ## WordPress Plugin Prompts
 
